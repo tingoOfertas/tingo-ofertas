@@ -1,0 +1,14 @@
+project/
+├── index.html
+├── styles/
+|
+|   ├── global.css         (Estilos generales como body, container, botones generales)
+|   ├── product.css        (Estilos específicos para las tarjetas de productos)
+|   ├── cart.css           (Estilos específicos para el carrito de compras)
+|   ├── modal.css          (Estilos específicos para los modales)
+|   ├── notification.css          )
+├── scripts/
+│   ├── api.js        // Lógica relacionada con la API
+│   ├── cart.js       // Funcionalidades del carrito
+│   ├── products.js   // Lógica de carga y visualización de productos
+│   └── notifications.js // Lógica de las notificaciones

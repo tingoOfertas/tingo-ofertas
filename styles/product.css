@@ -1,0 +1,74 @@
+/* product.css */
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #2A2A2A;
+    border: 1px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Las imágenes y los videos tienen un 100% de ancho si son lo único que se muestra */
+.product-card img, .product-video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Si hay tanto imagen como video, dividen el espacio al 50% */
+.media-container img + .product-video,
+.media-container .product-video + img {
+    width: 48%;
+}
+
+.product-card img:hover, .product-video:hover {
+    transform: scale(1.1);
+}
+
+.product-card h2 {
+    font-size: 1.6em;
+    color: #00d9ff;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #cccccc;
+    font-size: 1em;
+    line-height: 1.4em;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #76ff03;
+    margin: 20px 0;
+    font-weight: bold;
+}
+.wholesale-price {
+    font-size: 0.9em;
+    color: #ff4d4d;
+    margin-top: 5px;
+}
