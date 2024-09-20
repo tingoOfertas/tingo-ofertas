@@ -1,5 +1,5 @@
 /*Lógica de API y carga de productos */
-const apiEndpoint = 'https://sheetdb.io/api/v1/jcf3t9indw0pe';
+const apiEndpoint = 'https://sheetdb.io/api/v1/o6acymxaetcl0';
 let products = [];
 
 const loadProducts = async (category = '') => {
