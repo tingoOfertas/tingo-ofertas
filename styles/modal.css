@@ -1,11 +1,11 @@
-/* modal.css */
-.modal, .full-screen-image {
+/* Estilos del Modal de Carrito */
+.modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);  /* Fondo oscuro translúcido */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,35 +14,93 @@
     opacity: 0;
     transition: 0.3s ease;
 }
-.modal.active, .full-screen-image.active {
+
+.modal.active {
     visibility: visible;
     opacity: 1;
 }
+
 .modal-content {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 12px;
+    background-color: #292929;  /* Color de fondo más suave */
+    padding: 30px;  /* Padding más amplio */
+    border-radius: 16px;  /* Bordes redondeados */
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;  /* Ajuste del ancho máximo */
     text-align: center;
     position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);  /* Sombra más pronunciada */
+    transition: transform 0.3s ease;
 }
+
 .modal-content h2 {
-    color: #76ff03;
-    font-size: 1.8em;
+    color: #00e676;  /* Verde más suave */
+    font-size: 2em;
+    margin-bottom: 20px;
 }
+
+.modal-content ul {
+    list-style-type: none;  /* Quitamos viñetas */
+    padding: 0;
+}
+
 .modal-content ul li {
     display: flex;
     justify-content: space-between;
     margin: 15px 0;
     font-size: 1.2em;
     color: #ffffff;
+    padding: 10px;
+    background-color: #3d3d3d;  /* Fondo ligeramente más claro */
+    border-radius: 8px;
 }
+
+.modal-content ul li span {
+    display: inline-block;
+    min-width: 80px;
+}
+
+.modal-content ul li .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.modal-content ul li button {
+    background-color: #00c853;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 5px;
+    transition: background-color 0.2s ease;
+}
+
+.modal-content ul li button:hover {
+    background-color: #00b84d;  /* Cambia a un verde más oscuro */
+}
+
+.modal-content .remove-button {
+    background-color: #ff5252;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .remove-button:hover {
+    background-color: #ff1744;  /* Color más oscuro al hacer hover */
+}
+
 .modal-content .total {
-    font-size: 1.5em;
-    color: #76ff03;
+    font-size: 1.8em;
+    color: #00e676;
     margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;  /* Separador en la parte superior */
 }
+
 .modal-content .close-button {
     position: absolute;
     top: 10px;
@@ -52,4 +110,29 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content .close-button:hover {
+    background-color: #ff6347;
+}
+
+.buy-button {
+    background-color: #00c853;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #00a83a;
 }
