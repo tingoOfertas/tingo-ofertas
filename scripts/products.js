@@ -11,7 +11,7 @@ const displayProducts = (category = '') => {
 
         // Si hay imagen, la añadimos al contenido
         if (product.Foto) {
-            mediaContent += `<img src="${product.Foto}" alt="${product['Nombre del producto']}" />`;
+            mediaContent += `<img class="product-image" src="${product.Foto}" alt="${product['Nombre del producto']}" />`;
         }
 
         // Si hay video, lo añadimos al contenido
@@ -21,7 +21,7 @@ const displayProducts = (category = '') => {
 
         // Si no hay ni imagen ni video, mostramos un placeholder
         if (!product.Foto && !product.EnlaceVideo) {
-            mediaContent = `<img src="https://via.placeholder.com/400" alt="Imagen no disponible" />`;
+            mediaContent = `<img class="product-image" src="https://via.placeholder.com/400" alt="Imagen no disponible" />`;
         }
 
         // Verificamos si hay precio por mayor
@@ -43,6 +43,24 @@ const displayProducts = (category = '') => {
                 </div>
             </div>`;
         container.insertAdjacentHTML('beforeend', productCard);  // Añadimos cada producto al contenedor
+    });
+
+    // Ahora que los productos están generados, añadimos la lógica para el modal
+    document.querySelectorAll(".product-image").forEach(img => {
+        img.addEventListener("click", function() {
+            // Abrir modal cuando se hace clic en la imagen
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("expandedImage");
+            modal.style.display = "flex";  // Mostramos el modal
+            modalImg.src = this.src;  // Ponemos la imagen clicada en el modal
+        });
+    });
+
+    // Función para cerrar el modal cuando se hace clic en la "X"
+    const closeModal = document.querySelector(".close-modal");
+    closeModal.addEventListener("click", function() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none";  // Ocultamos el modal
     });
 };
 
