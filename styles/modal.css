@@ -136,3 +136,44 @@
 .buy-button:hover {
     background-color: #00a83a;
 }
+
+
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .modal-content ul li .quantity {
+        width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+        justify-content: space-between; /* Alinear correctamente botones y cantidad */
+        margin-top: 10px;  /* Añade un pequeño margen superior */
+    }
+
+    .modal-content ul li span {
+        min-width: 45%;  /* Ajuste para que los textos no se solapen */
+    }
+
+    .modal-content ul li button {
+        padding: 10px; /* Aumenta el padding para mejor accesibilidad en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content ul li .quantity {
+        width: 100%;
+        justify-content: space-between;
+        margin: 10px 0; /* Añadir margen entre cantidad y los demás elementos */
+    }
+
+    .modal-content ul li button {
+        padding: 8px;  /* Reducir el padding de los botones en pantallas muy pequeñas */
+        font-size: 0.9em;  /* Ajustar el tamaño de la fuente en botones */
+    }
+
+    .modal-content ul li span {
+        font-size: 0.9em;  /* Reducir ligeramente el tamaño del texto */
+        min-width: 45%;  /* Asegura que los textos no se solapen en pantalla muy pequeñas */
+    }
+
+    .modal-content ul li {
+        margin: 10px 0;  /* Añadir un margen para mayor separación en ítems */
+    }
+}
